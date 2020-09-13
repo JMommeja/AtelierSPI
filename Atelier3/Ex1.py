@@ -1,6 +1,8 @@
-def Calcule1 (L):
-    for i in range (len(L)) :
-        return (L[i])
+def Calcule1 (L:list):
+    somme = 0
+    for i in range(len(L)) :
+        somme+=
+    return somme
 
-
-print (Calcule1(list[1,5,9]))
+ma_list = [1,5,9]
+print (Calcule1(ma_list))

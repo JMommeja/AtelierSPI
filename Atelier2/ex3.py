@@ -49,13 +49,18 @@ def solution_equation(a:float, b:float, c:float):
     """renvoie chaine caractere redige"""
 
     if descriminant(a,b,c)<0:
-        return "Solution equation "+str_equation(a,b,c)+" Pas de racine"
-    if descriminant(a,b,c)==0:
-        return "Solution equation ",a,"x2 + ",b,"x + ",c," = 0 une racine unique x="+racine_unique(a,b)
-    if descriminant(a,b,c)>0:
-        return "Solution equation ",a,"x2 + ",b,"x + ",c," = 0 deux racines""x1 =" 
-
+        res = "Solution equation "+str_equation(a,b,c)+" Pas de racine"
+    elif descriminant(a,b,c)==0:
+        res =  "Solution equation "+str_equation(a,b,c)+" une racine unique x="+racine_unique(a,b)
+    else:
+        res = "Solution equation "+str_equation(a,b,c)+" deux racines""x1 =" +racine_double(a,b,delta,1) + "x2 = "+ racine_double(a,b,delta,2)
+    return res 
     
+def test_solution_equation():
+    a =float(input("entrez A : "))
+    b =float(input("entrez B : "))
+    c =float(input("entrez C : "))
 
+    print ("la solution est : ")+ str(solution_equation(a,b,c))
 
 print (str_equation(6.0,6.0,6.0))
