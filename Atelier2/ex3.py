@@ -5,7 +5,10 @@ def descriminant ( a:float,b:float,c:float)-> float:
 
 def racine_unique(a:float,b:float) -> float:
     """calcul racine unique """
-    return  -b/2*a
+    if a ==0 :
+        return 0
+    else :
+        return  -b/2*a
     
 def racine_double(a:float,b:float,delta:float,num:float)->float:
     """renvoie la valeur  de la racine"""
@@ -23,10 +26,8 @@ def str_equation(a,b,c)->str:
        if a == 1 :
            a = ""
        elif a==-1:
-           a = "-"
-       
+           a = "-"       
        equation += str(a)+"x2 "     
-
     if(b!=0):
        if b == 1 :
            b = ""
@@ -34,8 +35,7 @@ def str_equation(a,b,c)->str:
            b = "-" 
        if b>0 and a!=0 :
            equation+="+"
-       equation += str(b)+"x"   
-       
+       equation += str(b)+"x"          
     if(c!=0):
       if c>0 and b!=0 :
            equation += "+"

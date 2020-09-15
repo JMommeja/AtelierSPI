@@ -19,8 +19,8 @@ def saisie_date_naissance() :
         "Veilliez rentrez une date valide"
     
 def age(date_naissance) :
-    ajd = date.today 
-    res = date_naissance - ajd
-    return res 
+    ajd = date.today() 
+    res = (ajd - date_naissance)
+    return res / 365
 
 print (age(saisie_date_naissance()))
