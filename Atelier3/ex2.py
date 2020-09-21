@@ -5,14 +5,15 @@ def position (L,e):
        if L[i]==e:
            return i
 print (position (L,5))
-###def positionWhile (L,e):
-###     i=0
-###     while i <= (len(L)) :
-###       if L[i]==e:
-###           return i
-###       else : 
-###           i=+1
-###print (positionWhile(L,5))
+def positionWhile (L,e):
+     i=0
+     while i <= (len(L)) :
+       if L[i]==e:
+           return i
+       else : 
+           i=+1
+print ("positionwhile")
+print (positionWhile(L,5))
 # MARCHE PAS ?????
 def nb_occurence(L,e) :
      i=0
@@ -62,7 +63,7 @@ def separer(L):
       
           
     return LSEP 
-
+print("separerL")
 print (separer(L))
 
 def a_repetition(L):

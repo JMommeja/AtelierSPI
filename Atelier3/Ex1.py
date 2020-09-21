@@ -10,6 +10,7 @@ def Calcule1 (L:list):
     return somme
     while i < len(L) :
         somme+=L[i]
+        i+=1
     return somme
 
 #ma_list = [1,5,9]
@@ -61,6 +62,7 @@ def moy_sup(L,e):
     somme = 0
     compt=0
     for i in range(len(L)) :
+        # for (i=0 ; i < len(L) ; i++)
         if L[i]>e:
             compt+=1
             somme+=L[i]
